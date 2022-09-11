@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>we 1 </title>
+    <style>
+        body{
+            padding: 10px;
+        }
+      #nav{
+         width: 100%;
+         border: 1px solid black;
+         margin: auto;
+         background-color: yellow;
+      }
+      #mid{width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        margin: auto; 
+        grid-template-rows: 200px;
+        border: 0px solid red;  
+        margin-top: 30px;
+       }
+       #mid div:nth-child(1){
+        background-color: red;
+       }
+       #mid div:nth-child(2){
+        background-color:green;
+       }
+       #mid div:nth-child(3){
+        background-color: blue;
+       }
+       #mid div:nth-child(4){
+        background-color: grey;
+       }
+       @media all and (min-width:552px) and (max-width:720px){
+        #mid{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 200px 200px;
+            
+        }
+        #mid div:nth-child(1){
+         order: 1;
+        }
+        #mid div:nth-child(2){
+         order: 3;
+       }
+       #mid div:nth-child(3){
+         order: 2;
+       }
+       #mid div:nth-child(4){
+         order: 4;
+
+        }
+    }
+        @media all and (min-width:320px) and (max-width:551px){
+        #mid{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 100px 100px 100px 100px;
+            
+        }
+        #mid div:nth-child(1){
+         order: 1;
+        }
+        #mid div:nth-child(2){
+         order: 3;
+       }
+       #mid div:nth-child(3){
+         order: 4;
+       }
+       #mid div:nth-child(4){
+         order: 2;
+       }
+    }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <h1>Navigation</h1>
+    </div>
+
+    <div id="mid">
+        <div>
+            <h1>Box 1</h1>
+        </div>
+        <div>
+            <h1>Box 2</h1>
+        </div>
+        <div>
+            <h1>Box 3</h1>
+        </div>
+        <div>
+            <h1>Box 4</h1>
+        </div>
+    </div>
+</body>
+</html>
